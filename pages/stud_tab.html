@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/assets/css/node.css">
+    <title>Table View</title>
+</head>
+<body class="tblbody" onload="table()">
+    <table class="datatbl">
+        <th>
+            <tr class="tblcol">
+                <td>State</td>
+                <td>Sl.No</td>
+                <td>Name</td>
+                <td>Phone</td>
+                <td>Email</td>
+                <td>Password</td>
+                <td>Gender</td>
+                <td>courses</td>
+                <td>Preferred Location</td>
+                <td>Address</td>
+                <td>Action</td>
+            
+            </tr>
+                       
+        </th>
+        <tbody id="tabledata">
+            
+        </tbody>
+        
+    </table>
+    <div class="button">
+        <button type="button" id="allselectdelete" onclick="allselectdel()">Delete</button>
+    </div>
+
+
+    <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+        
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Edit</h4>
+            </div>
+            <div class="modal-body">
+                    <table class="tblform">
+                        <tbody class="formbdy">
+                            
+                            <tr>
+                                <td>Name : &nbsp;</td>
+                                <td><input class="t1"  id="name" type="text" /></td>
+                            </tr>
+                            <tr>
+                                <td>Phone No : &nbsp;</td>
+                                <td><input class="t1"  id="phone" type="tel" ></td>
+                            </tr>
+                            <tr>
+                                <td>Email : &nbsp;</td>
+                                <td><input class="t1"  id="email" type="email" autocomplete="username"></td>
+                            </tr>
+                            <tr>
+                                <td>Create password : &nbsp;</td>
+                                <td><input class="t1"  id="password-1" type="text"  autocomplete="current-password"></td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Gender : &nbsp;</td>
+                                <td>
+                                    <input type="radio" name="gender" id="male" value="male">Male
+                                    <input type="radio" name="gender" id="female" value="female">Female
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>courses :</td>
+                                <td>
+                                    <select  class="status" name="status" id="status" >
+                                        <option value="java">java</option>
+                                        <option value="python">python</option>
+                                        <option value="php">php</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Preferred Location : &nbsp;</td>
+                                <td>
+                                    <input type="checkbox" class="cb" name="place" id="Mumbai" value="Mumbai" >Mumbai
+                                    <input type="checkbox" class="cb" name="place" id="Bangalore" value="Bangalore" >Bangalore
+                                    <input type="checkbox" class="cb" name="place" id="Chennai" value="Chennai">Chennai <br>
+                                    <input type="checkbox" class="cb" name="place" id="Hydrabad" value="Hydrabad">Hydrabad
+                                    <input type="checkbox" class="cb" name="place" id="Delhi" value="Delhi">Delhi
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Address : &nbsp;</td>
+                                <td><textarea class="address"  id="address" cols="10" rows="10" ></textarea></td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+            </div>
+            <div class="modal-footer">
+                <button id="save"  class="btn btn-success" >SAVE</button>
+            <button type="button" onclick="refresh()" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        
+        </div>
+  </div>
+
+
+    <script src="/assets/js/node.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/assets/css/node.css">
+    <title>Form</title>
+</head>
+<body>
+    <!-- <form > -->
+        <div class="row tbl">
+            <table>
+                <tbody>
+                    <h2 class="title">INFORMATION</h2>
+                    <tr>
+                        <td>Full Name : &nbsp;</td>
+                        <td><input class="t1" id="name" type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Phone No : &nbsp;</td>
+                        <td><input class="t1" id="phone" type="tel"></td>
+                    </tr>
+                    <tr>
+                        <td>Email : &nbsp;</td>
+                        <td><input class="t1" id="email" type="email"></td>
+                    </tr>
+                    <tr>
+                        <td>Create password : &nbsp;</td>
+                        <td><input class="t1" id="password-1" type="password"></td>
+                    </tr>
+                    <tr>
+                        <td>Re-write Password : &nbsp;</td>
+                        <td><input class="t1" id="password-2" type="password"></td>
+                    </tr>
+                    <tr>
+                        <td>Gender : &nbsp;</td>
+                        <td>
+                            <input type="radio" name="gender" id="male" value="male">Male
+                            <input type="radio" name="gender" id="female" value="female">Female
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>courses :</td>
+                        <td>
+                            <select  class="status" name="status" id="status" >
+                                <option value="java">java</option>
+                                <option value="python">python</option>
+                                <option value="php">php</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Preferred Location : &nbsp;</td>
+                        <td>
+                            <input type="checkbox" class="checkbox" name="place" id="Mumbai" value="Mumbai">Mumbai
+                            <input type="checkbox" class="checkbox" name="place" id="Bangalore" value="Bangalore" >Bangalore
+                            <input type="checkbox" class="checkbox" name="place" id="Chennai" value="Chennai">Chennai <br>
+                            <input type="checkbox" class="checkbox" name="place" id="Hydrabad" value="Hydrabad">Hydrabad
+                            <input type="checkbox" class="checkbox" name="place" id="Delhi" value="Delhi">Delhi
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Address : &nbsp;</td>
+                        <td><textarea name="address" id="address" cols="50" rows="10"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn1" onclick="add()">SAVE</button></td>
+                        <td><a class="pagelink" href="/stud_tab">View Details</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    <!-- </form> -->
+
+<script src="/assets/js/node.js"></script>
+</body>
+</html>
